@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .box {
+      display: none;
+      padding: 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #f1f1f1;
+    }
+
+
+  </style>
+</head>
+<body>
+  <a rel='m_PageScroll2id' href="#box" onclick="openbox('box'); return false">Оставить отзыв</a>
+  <div id="box" class="box">dffsdfsf</div>
+<script>
+    function openbox(box){
+        let display = document.getElementById(box).style.display;
+        if(display=='none'){
+            document.getElementById(box).style.display='block';
+        }else{
+            document.getElementById(box).style.display='none';
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+    .b-toggle {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      -moz-transition: opacity .3s, max-height .3s;
+      -ms-transition: opacity .3s, max-height .3s;
+      transition: opacity .3s, max-height .3s;
+      _display: none;
+    }
+    .expanded {
+      max-height: 100px;
+      opacity: 1;
+      _display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="reg">
+    <a id="button" href="#"> Регистрация</a>
+    <div id="informer" class="b-toggle">
+      <form>
+        <div><input/></div>
+        <button/>
+      </form>
+    </div>
+    text
+  </div>
+
+  <script>
+      button.onclick = function (){
+          var className = informer.className;
+          if( className.indexOf(' expanded') == -1 ){
+              className += ' expanded';
+          }
+          else {
+              className = className.replace(' expanded', '');
+          }
+          informer.className = className;
+          return false;
+      };
+      /*
+            window.onclick = function (){
+          let informer = document.getElementById('informer');
+          let className = informer.className;
+          if( className.indexOf(' expanded') == -1 ){
+              className += ' expanded';
+          }
+          else {
+              className = className.replace(' expanded', '');
+          }
+          informer.className = className;
+          return false;
+      };
+      */
+  </script>
+</body>
+</html>
